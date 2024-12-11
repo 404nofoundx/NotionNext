@@ -70,8 +70,8 @@ const BLOG = {
   // 无衬线字体 例如'"LXGW WenKai"'
   FONT_SANS: [
     // '"LXGW WenKai"',
-    '"PingFang SC"',
     '-apple-system',
+    '"PingFang SC"',
     'BlinkMacSystemFont',
     '"Hiragino Sans GB"',
     '"Microsoft YaHei"',
