@@ -208,3 +208,8 @@ The MIT License.
 ## Star History
 
 [![Star History Chart](https://api.star-history.com/svg?repos=tangly1024/NotionNext&type=Date)](https://star-history.com/#tangly1024/NotionNext&Date)
+
+
+nvm use v16.14.0
+yarn
+yarn build

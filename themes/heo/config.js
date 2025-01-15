@@ -164,6 +164,7 @@ const CONFIG = {
       color_2: '#1f1f1f'
     }
   ],
+  WECHAT_CODE_PATH : "/images/wechat.png",
 
   HEO_SOCIAL_CARD: false, // 是否显示右侧，点击加入社群按钮
   HEO_SOCIAL_CARD_TITLE_1: '交流频道',

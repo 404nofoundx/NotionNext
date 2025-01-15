@@ -1,6 +1,8 @@
 import { useGlobal } from '@/lib/global'
 import { useEffect, useRef } from 'react'
-
+import LazyImage from '@/components/LazyImage'
+import { siteConfig } from '@/lib/config'
+import CONFIG from '../config'
 /**
  * 加密文章校验组件
  * @param {password, validPassword} props
@@ -26,12 +28,14 @@ export const PostLock = props => {
     // 选中密码输入框并将其聚焦
     passwordInputRef.current.focus()
   }, [])
+  const WECHAT_CODE_PATH = siteConfig('WECHAT_CODE_PATH', false, CONFIG)
 
   return (
     <div
       id='container'
       className='w-full flex justify-center items-center h-96 '>
       <div className='text-center space-y-3'>
+
         <div className='font-bold dark:text-gray-300 text-black'>
           {locale.COMMON.ARTICLE_LOCK_TIPS}
         </div>
@@ -53,6 +57,19 @@ export const PostLock = props => {
               &nbsp;{locale.COMMON.SUBMIT}
             </i>
           </div>
+        </div>
+        <div
+          className={
+            'tags-group-icon  mt-5 w-28 h-28 rounded-3xl flex items-center justify-center text-white text-lg font-bold shadow-md'
+          }
+          style={{ width: '320px', height: '320px' }}
+          >
+          <LazyImage
+            priority={true}
+            src={WECHAT_CODE_PATH}
+            title='wechat'
+            className='w-2/3 hidden xl:block'
+          />
         </div>
         <div id='tips'></div>
       </div>
